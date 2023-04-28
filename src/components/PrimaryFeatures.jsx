@@ -5,34 +5,33 @@ import clsx from "clsx";
 
 import { Container } from "@/components/Container";
 import backgroundImage from "@/images/background-features.jpg";
-import screenshotExpenses from "@/images/screenshots/expenses.png";
-import screenshotPayroll from "@/images/screenshots/payroll.png";
-import screenshotReporting from "@/images/screenshots/reporting.png";
-import screenshotVatReturns from "@/images/screenshots/vat-returns.png";
+import screenshotExpenses from "@/images/screenshots/screen1.png";
+import screenshotPayroll from "@/images/screenshots/screen2.png";
+import screenshotReporting from "@/images/screenshots/screen3.png";
+import screenshotVatReturns from "@/images/screenshots/screen4.png";
 
 const features = [
   {
-    title: "Payroll",
+    title: "Know Thy Data",
     description:
-      "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
+      "Data profiles with key metrics to assess your data sources (e.g. freshness, uniqueness, top-k, histograms, missing values, duplicate rows)",
     image: screenshotPayroll,
   },
   {
-    title: "Claim expenses",
+    title: "See the Changes that Matter",
     description:
-      "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
+      "Visualize schema changes, statistical profiles, and dbt metrics changes, so that you don't lose in the noises of alerts and overlook the important signals that really matters.",
     image: screenshotExpenses,
   },
   {
     title: "VAT handling",
     description:
-      "We only sell our software to companies who don't deal with VAT at all, so technically we do all the VAT stuff they need.",
+      "dbt. data warehouses. modern data stack tools. you name it. Augment your CI process with the ready-made github action from marketplace",
     image: screenshotVatReturns,
   },
   {
-    title: "Reporting",
-    description:
-      "Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.",
+    title: "Data Sovereignty",
+    description: "Data stay with you. and we help you collaborate.",
     image: screenshotReporting,
   },
 ];
@@ -59,10 +58,13 @@ export function PrimaryFeatures() {
     <section
       id="features"
       aria-label="Features for running your books"
-      className="relative overflow-hidden bg-blue-600 pb-28 pt-20 sm:py-32"
+      className="relative overflow-hidden bg-[#dc8e3b] pb-28 pt-20 sm:py-32"
     >
       <Image
-        className="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
+        className="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%] opacity-60"
+        style={{
+          mixBlendMode: "color-burn",
+        }}
         src={backgroundImage}
         alt=""
         width={2245}

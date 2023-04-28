@@ -7,6 +7,7 @@ import { Container } from "@/components/Container";
 import screenshotContacts from "@/images/screenshots/contacts.png";
 import screenshotInventory from "@/images/screenshots/inventory.png";
 import screenshotProfitLoss from "@/images/screenshots/profit-loss.png";
+import { recentPosts } from "@/lib/siteMeta";
 
 const features = [
   {
@@ -216,15 +217,35 @@ export function SecondaryFeatures() {
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
           <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
-            Simplify everyday business tasks.
+            Latest Blog Posts
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-slate-700">
+          <p className="mt-4 text-lg tracking-tight text-slate-700 mb-12">
             Because you’d probably be a little confused if we suggested you
             complicate your everyday business tasks instead.
           </p>
         </div>
-        <FeaturesMobile />
-        <FeaturesDesktop />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {recentPosts.map((post) => {
+            return (
+              <div
+                key={post.href}
+                className=" rounded-lg shadow-lg border border-zinc-300 relative hover:scale-110 transition"
+              >
+                <a href={post.href} className="absolute inset-0"></a>
+                <div className="flex flex-col">
+                  <img
+                    src={post.thumbnail}
+                    alt="Blog post image"
+                    className="w-full rounded-t-lg"
+                  />
+                  <h3 className="font-display text-xl tracking-tight text-slate-900 p-4">
+                    {post.title}
+                  </h3>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </Container>
     </section>
   );

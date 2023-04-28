@@ -51,7 +51,7 @@ function Plan({ name, price, description, href, features, featured = false }) {
     <section
       className={clsx(
         "flex flex-col rounded-3xl px-6 sm:px-8",
-        featured ? "order-first bg-blue-600 py-8 lg:order-none" : "lg:py-8"
+        featured ? "order-first bg-black invert py-8 lg:order-none" : "lg:py-8"
       )}
     >
       <h3 className="mt-5 font-display text-lg text-white">{name}</h3>
@@ -98,63 +98,57 @@ export function Pricing() {
     <section
       id="pricing"
       aria-label="Pricing"
-      className="bg-slate-900 py-20 sm:py-32"
+      className="bg-zinc-900 py-20 sm:py-32"
     >
       <Container>
         <div className="md:text-center">
+          <p className="text-white">Cloud Plans</p>
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
             <span className="relative whitespace-nowrap">
-              <SwirlyDoodle className="absolute left-0 top-1/2 h-[1em] w-full fill-blue-400" />
-              <span className="relative">Simple pricing,</span>
+              <SwirlyDoodle className="absolute left-0 top-1/2 h-[1em] w-full fill-orange-400" />
+              <span className="relative">Data confidence</span>
             </span>{" "}
-            for everyone.
+            for all.
           </h2>
           <p className="mt-4 text-lg text-slate-400">
-            It doesn’t matter what size your business is, our software won’t
-            work well for you.
+            Sign up now and get 14 days of Pro Features for free!
           </p>
         </div>
         <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
           <Plan
-            name="Starter"
-            price="$9"
-            description="Good for anyone who is self-employed and just getting started."
-            href="/register"
+            name="Developer"
+            price="$0"
+            description="For devs tired of data quality issues"
+            href="https://cloud.piperider.io/signup?ref=pricing-0"
             features={[
-              "Send 10 quotes and invoices",
-              "Connect up to 2 bank accounts",
-              "Track up to 15 expenses per month",
-              "Manual payroll support",
-              "Export up to 3 reports",
+              "Up to 3 projects",
+              "30 report uploads per project per month",
+              "Basic ACL",
             ]}
           />
           <Plan
             featured
-            name="Small business"
-            price="$15"
-            description="Perfect for small / medium sized businesses."
-            href="/register"
+            name="Pro"
+            price="$150"
+            description="For teams building trustworthy pipelines"
+            href="https://cloud.piperider.io/signup?ref=pricing-150"
             features={[
-              "Send 25 quotes and invoices",
-              "Connect up to 5 bank accounts",
-              "Track up to 50 expenses per month",
-              "Automated payroll support",
-              "Export up to 12 reports",
-              "Bulk reconcile transactions",
-              "Track in multiple currencies",
+              "Up to 10 projects",
+              "100 report uploads per project per month",
+              "Basic ACL",
             ]}
           />
           <Plan
             name="Enterprise"
-            price="$39"
-            description="For even the biggest enterprise companies."
-            href="/register"
+            price="Let's Talk!"
+            description="For businesses with custom needs"
+            href="https://cloud.piperider.io/signup?ref=pricing-enterprise"
             features={[
-              "Send unlimited quotes and invoices",
-              "Connect up to 15 bank accounts",
-              "Track up to 200 expenses per month",
-              "Automated payroll support",
-              "Export up to 25 reports, including TPS",
+              "Unlimited Projects",
+              "Pay as you go report uploads",
+              "Advanced ACL",
+              "SSO Login",
+              "Custom data sources",
             ]}
           />
         </div>
