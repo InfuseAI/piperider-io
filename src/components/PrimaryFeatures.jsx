@@ -24,7 +24,7 @@ const features = [
     image: screenshotExpenses,
   },
   {
-    title: "VAT handling",
+    title: "Automate & Integrate with Your Existing Stack",
     description:
       "dbt. data warehouses. modern data stack tools. you name it. Augment your CI process with the ready-made github action from marketplace",
     image: screenshotVatReturns,
