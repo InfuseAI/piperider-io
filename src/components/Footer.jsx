@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Container } from "@/components/Container";
 import { Logo } from "@/components/Logo";
 import { NavLink } from "@/components/NavLink";
+import { siteNav } from "@/lib/siteMeta";
 
 export function Footer() {
   return (
@@ -12,9 +13,11 @@ export function Footer() {
           <Logo className="mx-auto h-10 w-auto" />
           <nav className="mt-10 text-sm" aria-label="quick links">
             <div className="-my-1 flex justify-center gap-x-6">
-              <NavLink href="#features">Features</NavLink>
-              <NavLink href="#testimonials">Testimonials</NavLink>
-              <NavLink href="#pricing">Pricing</NavLink>
+              {siteNav.map((navItem) => (
+                <NavLink key={navItem.href} href={navItem.href}>
+                  {navItem.name}
+                </NavLink>
+              ))}
             </div>
           </nav>
         </div>
@@ -23,7 +26,7 @@ export function Footer() {
             <Link
               href="https://twitter.com"
               className="group"
-              aria-label="TaxPal on Twitter"
+              aria-label="PipeRider on Twitter"
             >
               <svg
                 aria-hidden="true"
@@ -35,7 +38,7 @@ export function Footer() {
             <Link
               href="https://github.com"
               className="group"
-              aria-label="TaxPal on GitHub"
+              aria-label="PipeRider on GitHub"
             >
               <svg
                 aria-hidden="true"
@@ -46,7 +49,7 @@ export function Footer() {
             </Link>
           </div>
           <p className="mt-6 text-sm text-slate-500 sm:mt-0">
-            Copyright &copy; {new Date().getFullYear()} TaxPal. All rights
+            Copyright &copy; {new Date().getFullYear()} InfuseAI. All rights
             reserved.
           </p>
         </div>

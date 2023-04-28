@@ -9,6 +9,9 @@ export default function Document(props) {
       lang="en"
     >
       <Head>
+        {/* favicon */}
+        <link rel="icon" type="image/png" href="/favicon.png" />
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -19,6 +22,7 @@ export default function Document(props) {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend:wght@400;500&display=swap"
         />
+        <link href="https://piperider.io/" rel="canonical"></link>
       </Head>
       <body className="flex h-full flex-col">
         <Main />
