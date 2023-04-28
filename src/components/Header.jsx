@@ -102,6 +102,7 @@ export function Header() {
               <Logo className="h-10 w-auto" />
             </Link>
             <div className="hidden md:flex md:gap-x-6">
+              {" "}
               {siteNav.map((navItem) => (
                 <NavLink key={navItem.href} href={navItem.href}>
                   {navItem.name}
@@ -113,7 +114,7 @@ export function Header() {
             <div className="hidden md:block">
               <NavLink href="/login">Sign in</NavLink>
             </div>
-            <Button href="/register" color="blue">
+            <Button href="/register" color="orange">
               <span>
                 Get started <span className="hidden lg:inline">today</span>
               </span>
