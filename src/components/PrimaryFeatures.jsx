@@ -61,14 +61,12 @@ export function PrimaryFeatures() {
       className="relative overflow-hidden bg-[#dc8e3b] pb-28 pt-20 sm:py-32"
     >
       <Image
-        className="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%] opacity-60"
+        className="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%] opacity-60 min-w-full"
         style={{
           mixBlendMode: "color-burn",
         }}
         src={backgroundImage}
         alt=""
-        width={2245}
-        height={1636}
         unoptimized
       />
       <Container className="relative">

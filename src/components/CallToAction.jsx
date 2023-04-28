@@ -11,7 +11,7 @@ export function CallToAction() {
       className="relative overflow-hidden bg-[#dc8e3b] py-32"
     >
       <Image
-        className="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2 opacity-60"
+        className="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2 opacity-60 min-w-full"
         style={{
           mixBlendMode: "color-burn",
         }}
