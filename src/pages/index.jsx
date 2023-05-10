@@ -1,5 +1,8 @@
 import Head from "next/head";
+import getConfig from "next/config";
 import { loadIntercom } from "next-intercom";
+
+import * as amplitude from "@amplitude/analytics-browser";
 
 import { CallToAction } from "@/components/CallToAction";
 import { Faqs } from "@/components/Faqs";
@@ -22,7 +25,14 @@ export default function Home() {
     initWindow: true, // default: true
     delay: 0, // default: 0  - usefull for mobile devices to prevent blocking the main thread
   });
+  
+  const { publicRuntimeConfig } = getConfig();
+  const AMPLITUDE_API_KEY = publicRuntimeConfig.AMPLITUDE_API_KEY;
 
+  if (AMPLITUDE_API_KEY) {
+    amplitude.init(AMPLITUDE_API_KEY);
+  }
+  
   return (
     <>
       <Head>

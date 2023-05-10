@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import { track } from "@amplitude/analytics-browser";
+
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
 import backgroundImage from "@/images/background-call-to-action.jpg";
@@ -34,6 +36,9 @@ export function CallToAction() {
             href="https://cloud.piperider.io/signup?ref=prio-cta"
             color="white"
             className="mt-10"
+            onClick={() => {
+              track("[Action] Click CTA Launch Cloud");
+            }}
           >
             Launch Cloud
           </Button>
