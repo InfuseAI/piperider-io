@@ -119,7 +119,6 @@ export function Header() {
               <NavLink 
                 href="https://cloud.piperider.io/signin" 
                 onClick = {() => {
-                  console.log('abc')
                   track('[Action] Click Sign in');
                 }}
               >
