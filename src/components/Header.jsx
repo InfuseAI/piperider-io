@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Popover, Transition } from "@headlessui/react";
 import clsx from "clsx";
 
+import { track } from "@amplitude/analytics-browser";
+
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
 import { Logo } from "@/components/Logo";
@@ -114,11 +116,22 @@ export function Header() {
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <div className="hidden md:block">
-              <NavLink href="https://cloud.piperider.io/signin">
+              <NavLink 
+                href="https://cloud.piperider.io/signin" 
+                onClick = {() => {
+                  track('[Action] Click Sign in');
+                }}
+              >
                 Sign in
               </NavLink>
             </div>
-            <Button href="https://cloud.piperider.io/signup" color="orange">
+            <Button 
+              href="https://cloud.piperider.io/signup"
+              color="orange"
+              onClick = {() => {
+                track('[Action] Click Get started today');
+              }}
+            >
               <span>
                 Get started <span className="hidden lg:inline">today</span>
               </span>

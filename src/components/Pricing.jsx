@@ -1,5 +1,7 @@
 import clsx from "clsx";
 
+import { track } from "@amplitude/analytics-browser";
+
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
 
@@ -86,6 +88,9 @@ function Plan({ name, price, description, href, features, featured = false }) {
         color="white"
         className="mt-8"
         aria-label={`Get started with the ${name} plan for ${price}`}
+        onClick = {() => {
+          track(`[Action] Click Pricing ${name} plan Get started`);
+        }}
       >
         Get started
       </Button>

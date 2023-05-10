@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import { track } from "@amplitude/analytics-browser";
+
 import IconGithub from "@/components/IconGithub";
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
@@ -75,12 +77,21 @@ export function Hero() {
         </code>
       </pre>
       <div className="mt-10 flex justify-center gap-x-6">
-        <Button color="orange" href="https://cloud.piperider.io/signup">
+        <Button 
+          color="orange"
+          href="https://cloud.piperider.io/signup" 
+          onClick = {() => {
+            track('[Action] Click Hero Launch Cloud');
+          }}
+        >
           Launch Cloud
         </Button>
         <Button
-          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          href="https://github.com/InfuseAI/piperider/tree/main/piperider_cli"
           variant="outline"
+          onClick = {() => {
+            track('[Action] Click Hero GitHub');
+          }}
         >
           <IconGithub />
           <span className="ml-3">GitHub</span>
