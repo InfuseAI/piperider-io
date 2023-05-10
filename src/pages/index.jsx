@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { loadIntercom } from "next-intercom";
 
 import { CallToAction } from "@/components/CallToAction";
 import { Faqs } from "@/components/Faqs";
@@ -12,6 +13,16 @@ import { Testimonials } from "@/components/Testimonials";
 import { siteMeta } from "@/lib/siteMeta";
 
 export default function Home() {
+  /*
+  Generate the intercom script and load the composer
+  */
+  loadIntercom({
+    appId: "ofl16ydc", // default : ''
+    ssr: false, // default: false
+    initWindow: true, // default: true
+    delay: 0, // default: 0  - usefull for mobile devices to prevent blocking the main thread
+  });
+
   return (
     <>
       <Head>
