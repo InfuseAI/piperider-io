@@ -31,6 +31,7 @@ export default function Home() {
 
   if (AMPLITUDE_API_KEY) {
     amplitude.init(AMPLITUDE_API_KEY);
+    amplitude.track('[Init] View Home Page')
   }
   
   return (

@@ -49,7 +49,6 @@ function CheckIcon({ className }) {
 }
 
 function Plan({ name, price, unit = "", description, href, features, featured = false }) {
-  const priceTag = unit ? `${price}/${unit}` : price;
   return (
     <section
       className={clsx(
@@ -67,7 +66,8 @@ function Plan({ name, price, unit = "", description, href, features, featured = 
         {description}
       </p>
       <p className="order-first font-display text-5xl font-light tracking-tight text-white">
-        {priceTag}
+        <span>{price}</span>
+        <span className="text-xl">{unit ? `/ ${unit}` : ""}</span>
       </p>
       <ul
         role="list"
@@ -90,10 +90,10 @@ function Plan({ name, price, unit = "", description, href, features, featured = 
         className="mt-8"
         aria-label={`Get started with the ${name} plan for ${price}`}
         onClick = {() => {
-          track(`[Action] Click Pricing ${name} plan Get started`);
+          track(`[Action] Click Pricing ${name} plan`);
         }}
       >
-        Get started
+        {name === "Enterprise" ? "Contact us" : "Get started"}
       </Button>
     </section>
   );
@@ -136,7 +136,7 @@ export function Pricing() {
             featured
             name="Pro"
             price="$150"
-            unit="Month"
+            unit="month"
             description="For teams building trustworthy pipelines"
             href="https://cloud.piperider.io/signup?ref=pricing-150"
             features={[
@@ -149,7 +149,7 @@ export function Pricing() {
             name="Enterprise"
             price="Let's Talk!"
             description="For businesses with custom needs"
-            href="https://cloud.piperider.io/signup?ref=pricing-enterprise"
+            href="mailto: product@piperider.io"
             features={[
               "Unlimited Projects",
               "Pay as you go report uploads",
