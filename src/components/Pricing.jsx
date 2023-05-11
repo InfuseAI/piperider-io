@@ -48,7 +48,8 @@ function CheckIcon({ className }) {
   );
 }
 
-function Plan({ name, price, description, href, features, featured = false }) {
+function Plan({ name, price, unit = "", description, href, features, featured = false }) {
+  const priceTag = unit ? `${price}/${unit}` : price;
   return (
     <section
       className={clsx(
@@ -66,7 +67,7 @@ function Plan({ name, price, description, href, features, featured = false }) {
         {description}
       </p>
       <p className="order-first font-display text-5xl font-light tracking-tight text-white">
-        {price}
+        {priceTag}
       </p>
       <ul
         role="list"
@@ -135,6 +136,7 @@ export function Pricing() {
             featured
             name="Pro"
             price="$150"
+            unit="Month"
             description="For teams building trustworthy pipelines"
             href="https://cloud.piperider.io/signup?ref=pricing-150"
             features={[
