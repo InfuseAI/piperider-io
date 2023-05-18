@@ -25,7 +25,7 @@ export default function Home() {
     initWindow: true, // default: true
     delay: 0, // default: 0  - usefull for mobile devices to prevent blocking the main thread
   });
-  
+
   const { publicRuntimeConfig } = getConfig();
   const AMPLITUDE_API_KEY = publicRuntimeConfig.AMPLITUDE_API_KEY;
 
@@ -33,12 +33,18 @@ export default function Home() {
     amplitude.init(AMPLITUDE_API_KEY);
     amplitude.track('[Init] View Home Page')
   }
-  
+
   return (
     <>
       <Head>
         <title>{siteMeta.title}</title>
         <meta name="description" content={siteMeta.description} />
+
+    	<meta property="og:title" content={siteMeta.ogTitle} />
+    	<meta property="og:image" content={siteMeta.ogImgUrl} />
+    	<meta property="og:description" content={siteMeta.ogDescription} />
+        <meta property="og:image:width" content="1200"/>
+        <meta property="og:image:height" content="630"/>
       </Head>
       <Header />
       <main>

@@ -2,6 +2,10 @@ export const siteMeta = {
   title: "PipeRider - Data Reliability Automated",
   description:
     "Define your data. Test your data. Trust your data. PipeRider is a data reliability management solution for datasets, experiments, models, and deployments throughout all your pipelines.",
+  ogTitle: "PipeRider - Data Reliability Automated",
+  ogDescription:
+    "Define your data. Test your data. Trust your data.",
+  ogImgUrl: "https://uploads-ssl.webflow.com/62da2ecde440ccf25cedef3b/6441eb50c3ccfa82e8b26509_Landing%20-%20Open%20Graph%20Image%20v1b.png",
 };
 
 export const siteNav = [
