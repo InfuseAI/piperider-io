@@ -6,6 +6,8 @@ export const siteMeta = {
   ogDescription:
     "Define your data. Test your data. Trust your data.",
   ogImgUrl: "https://uploads-ssl.webflow.com/62da2ecde440ccf25cedef3b/6441eb50c3ccfa82e8b26509_Landing%20-%20Open%20Graph%20Image%20v1b.png",
+  ogUrl: "https://www.piperider.io",
+  ogType: "website",
 };
 
 export const siteNav = [
