@@ -40,9 +40,11 @@ export default function Home() {
         <title>{siteMeta.title}</title>
         <meta name="description" content={siteMeta.description} />
 
-    	<meta property="og:title" content={siteMeta.ogTitle} />
-    	<meta property="og:image" content={siteMeta.ogImgUrl} />
-    	<meta property="og:description" content={siteMeta.ogDescription} />
+        <meta property="og:title" content={siteMeta.ogTitle} />
+        <meta property="og:image" content={siteMeta.ogImgUrl} />
+        <meta property="og:description" content={siteMeta.ogDescription} />
+        <meta property="og:url" content={siteMeta.ogUrl} />
+        <meta property="og:type" content={siteMeta.ogType} />
         <meta property="og:image:width" content="1200"/>
         <meta property="og:image:height" content="630"/>
       </Head>
