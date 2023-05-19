@@ -87,7 +87,7 @@ export function Hero() {
           Launch Cloud
         </Button>
         <Button
-          href="https://github.com/InfuseAI/piperider/tree/main/piperider_cli"
+          href="https://github.com/InfuseAI/piperider"
           variant="outline"
           onClick = {() => {
             track('[Action] Click Hero GitHub');
