@@ -57,20 +57,17 @@ export function Hero() {
         />
       </div>
       <div className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
+        <p>{"Don't"} break prod.</p>
         <p>
           Boost <FancyUnderline>team confidence</FancyUnderline> and velocity.{" "}
         </p>
         <p>
           Understand impact <FancyUnderline>Before you merge.</FancyUnderline>
         </p>
-        <p>{"Don't"} break prod.</p>
       </div>
       <pre className="rounded-lg bg-zinc-800 text-left max-w-[500px] mx-auto p-4 mt-8">
         <code className="text-white block">
           <span className="text-white/70">$</span> pip install piperider
-        </code>
-        <code className="text-white block">
-          <span className="text-white/70">$</span> piperider init
         </code>
         <code className="text-white block">
           <span className="text-white/70">$</span> piperider compare

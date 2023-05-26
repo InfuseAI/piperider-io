@@ -5,10 +5,9 @@ import clsx from "clsx";
 
 import { Container } from "@/components/Container";
 import backgroundImage from "@/images/background-features.jpg";
-import screenshotExpenses from "@/images/screenshots/screen1.png";
-import screenshotPayroll from "@/images/screenshots/screen2.png";
-import screenshotReporting from "@/images/screenshots/screen3.png";
-import screenshotVatReturns from "@/images/screenshots/screen4.png";
+import screenshotPayroll from "@/images/screenshots/run_report.png";
+import screenshotExpenses from "@/images/screenshots/comparison_report.png";
+import screenshotVatReturns from "@/images/screenshots/pr_summary.png";
 
 const features = [
   {
@@ -24,15 +23,10 @@ const features = [
     image: screenshotExpenses,
   },
   {
-    title: "Automate & Integrate with Your Existing Stack",
+    title: "Automate with Your Existing Stack",
     description:
       "dbt. data warehouses. modern data stack tools. you name it. Augment your CI process with the ready-made github action from marketplace",
     image: screenshotVatReturns,
-  },
-  {
-    title: "Data Sovereignty",
-    description: "Data stay with you. and we help you collaborate.",
-    image: screenshotReporting,
   },
 ];
 
@@ -86,7 +80,7 @@ export function PrimaryFeatures() {
         >
           {({ selectedIndex }) => (
             <>
-              <div className="-mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
+              <div className="-mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-4">
                 <Tab.List className="relative z-10 flex gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal">
                   {features.map((feature, featureIndex) => (
                     <div
@@ -125,7 +119,7 @@ export function PrimaryFeatures() {
                   ))}
                 </Tab.List>
               </div>
-              <Tab.Panels className="lg:col-span-7">
+              <Tab.Panels className="lg:col-span-8">
                 {features.map((feature) => (
                   <Tab.Panel key={feature.title} unmount={false}>
                     <div className="relative sm:px-6 lg:hidden">
@@ -134,13 +128,13 @@ export function PrimaryFeatures() {
                         {feature.description}
                       </p>
                     </div>
-                    <div className="mt-10 w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
+                    <div className="mt-10 w-[50.667rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[50.667rem]">
                       <Image
                         className="w-full"
                         src={feature.image}
                         alt=""
                         priority
-                        sizes="(min-width: 1024px) 67.8125rem, (min-width: 640px) 100vw, 45rem"
+                        sizes="(min-width: 1024px) 100vw, (min-width: 640px) 100vw, 50.667rem"
                       />
                     </div>
                   </Tab.Panel>

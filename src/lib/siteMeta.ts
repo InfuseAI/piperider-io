@@ -38,18 +38,18 @@ export const recentPosts = [
     title: "Reduce ‘command fatigue’ working on dbt data projects",
     href: "https://medium.com/inthepipeline/reduce-command-fatigue-working-on-dbt-data-projects-76ce0cf0ee61",
     thumbnail:
-      "https://metabox.s3.us-central-1.wasabisys.com/Public/64467e2f71a3fb3160627be5_compare-p-500-1682672478.png",
+      "https://miro.medium.com/v2/resize:fill:325:216/1*1Ee4JgFXhvNshqnWhy6EpA.png",
   },
   {
-    title: "Catch Common Data Quality Issues with PipeRider",
-    href: "https://medium.com/inthepipeline/how-to-catch-common-data-quality-issues-that-haunt-data-engineers-with-piperider-3a7703cd7f18",
+    title: "Why you need code review for you data projects",
+    href: "https://medium.com/inthepipeline/why-you-need-code-review-for-you-data-projects-95e039083df0",
     thumbnail:
-      "https://metabox.s3.us-central-1.wasabisys.com/Public/64467e256a96a766d91bab9b_common-data-quality-issues-p-500-1682672509.jpg",
+      "https://miro.medium.com/v2/resize:fill:325:216/format:webp/1*aFHG_28yKua3FpDKDVYTkg.png",
   },
   {
-    title: "Reduce ‘command fatigue’ working on dbt data projects",
-    href: "https://medium.com/inthepipeline/data-engineering-workshop-understand-the-impact-of-data-model-changes-in-dbt-with-piperider-372646f7be73",
+    title: "5 Interesting datasets from the Data Engineering Zoomcamp",
+    href: "https://medium.com/inthepipeline/5-interesting-datasets-from-the-data-engineering-zoomcamp-f0d6dd4d5e15",
     thumbnail:
-      "https://metabox.s3.us-central-1.wasabisys.com/Public/64467a795122a11786bf1c7e_piperider-dbt-workshop-p-500-1682672522.jpg",
+      "https://miro.medium.com/v2/resize:fill:325:216/1*K0xl9dWruJcPzT7lK50cEA.png",
   },
 ];
