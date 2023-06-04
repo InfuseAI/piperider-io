@@ -32,16 +32,38 @@ export function CallToAction() {
             Try PipeRider today and stop worrying about breaking prod.
             PipeRdier Cloud is free to get started, and offers flexibility for teams of different sizes and budgets.
           </p>
-          <Button
-            href="https://cloud.piperider.io/signup?ref=prio-cta"
-            color="white"
-            className="mt-10"
-            onClick={() => {
-              track("[Action] Click CTA Cloud");
-            }}
-          >
-            Try PipeRider Cloud
-          </Button>
+          <div className="mt-10 flex justify-center gap-x-6">
+            <Button
+              href="https://piperider-github-readme.s3.ap-northeast-1.amazonaws.com/comparison-report/index.html"
+              color="white"
+              className="mt-10"
+              onClick={() => {
+                track("[Action] Click CTA Report");
+              }}
+            >
+              Checkout the Report
+            </Button>
+            <Button
+              href="https://docs.piperider.io/get-started/quick-start"
+              color="white"
+              className="mt-10"
+              onClick={() => {
+                track("[Action] Click CTA Quick Start");
+              }}
+            >
+              Quick Start
+            </Button>
+            <Button
+              href="https://cloud.piperider.io/signup?ref=prio-cta"
+              color="white"
+              className="mt-10"
+              onClick={() => {
+                track("[Action] Click CTA Cloud");
+              }}
+            >
+              Try PipeRider Cloud
+            </Button>
+          </div>
         </div>
       </Container>
     </section>
