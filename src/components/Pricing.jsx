@@ -111,7 +111,7 @@ export function Pricing() {
           <p className="text-white">Cloud Plans</p>
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
             <span className="relative whitespace-nowrap">
-              <SwirlyDoodle className="absolute left-0 top-1/2 h-[1em] w-full fill-orange-400" />
+              <SwirlyDoodle className="absolute left-0 top-2/3 h-[0.5em] w-full fill-orange-400" />
               <span className="relative">Data confidence</span>
             </span>{" "}
             for all.
