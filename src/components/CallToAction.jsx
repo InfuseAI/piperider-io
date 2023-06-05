@@ -34,26 +34,6 @@ export function CallToAction() {
           </p>
           <div className="mt-10 flex justify-center gap-x-6">
             <Button
-              href="https://piperider-github-readme.s3.ap-northeast-1.amazonaws.com/comparison-report/index.html"
-              color="white"
-              className="mt-10"
-              onClick={() => {
-                track("[Action] Click CTA Report");
-              }}
-            >
-              Checkout the Report
-            </Button>
-            <Button
-              href="https://docs.piperider.io/get-started/quick-start"
-              color="white"
-              className="mt-10"
-              onClick={() => {
-                track("[Action] Click CTA Quick Start");
-              }}
-            >
-              Quick Start
-            </Button>
-            <Button
               href="https://cloud.piperider.io/signup?ref=prio-cta"
               color="white"
               className="mt-10"
