@@ -1,8 +1,10 @@
-# Piperider v2
+# Piperider Website
 
-A rebuilt version of the Piperider website using code. The previous website used Webflow and was a damn pain to edit. This is subjective of course, but it seemed that a code-based website would actually be more productive for Infuse, since almost everyone is technical.
+The current PipeRider website, built on NextJS and CSS. 
 
-It is up to you whether or not you want to use this code. I created it as an alternative to the current website and as a proof of concept. No expectation that you guys take the webflow site down.
+The underlying tooling may change as the owner (and potentially contributors) stabilize or shift (e.g. Framer, etc.).
+
+Hosted at [piperider.io](https://www.piperider.io/).
 
 ## Relevant Tech this is built with
 
