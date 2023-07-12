@@ -127,8 +127,8 @@ export function Pricing() {
             description="For devs tired of data quality issues"
             href="https://cloud.piperider.io/signup?ref=pricing-0"
             features={[
-              "Up to 3 projects",
               "30 report uploads per project per month",
+              "Up to 3 projects",
               "Basic ACL",
             ]}
           />
@@ -140,8 +140,8 @@ export function Pricing() {
             description="For teams building trustworthy pipelines"
             href="https://cloud.piperider.io/signup?ref=pricing-150"
             features={[
-              "Up to 10 projects",
               "100 report uploads per project per month",
+              "Up to 10 projects",
               "Basic ACL",
             ]}
           />
@@ -151,8 +151,8 @@ export function Pricing() {
             description="For businesses with custom needs"
             href="mailto: product@piperider.io"
             features={[
-              "Unlimited Projects",
               "Pay as you go report uploads",
+              "Unlimited Projects",
               "Advanced ACL",
               "SSO Login",
               "Custom data sources",
