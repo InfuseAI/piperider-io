@@ -35,6 +35,24 @@ export const siteNav = [
  */
 export const recentPosts = [
   {
+    title: "dbt Lineage Diff — Impact analysis, visualized",
+    href: "https://medium.com/inthepipeline/dbt-data-lineage-diff-impact-analysis-visualized-bec9927b0c4e",
+    thumbnail:
+      "https://miro.medium.com/v2/resize:fill:325:216/format:webp/1*YMiRnwJ7x2xaApEva5C_7Q.png",
+  },
+  {
+    title: "Unlocking Data Productivity: Lessons from Nvidia’s Jensen Huang",
+    href: "https://medium.com/inthepipeline/unlocking-data-productivity-lessons-from-nvidias-jensen-huang-aaf9032405b9",
+    thumbnail:
+      "https://miro.medium.com/v2/resize:fill:325:216/format:webp/1*EtXEq2OPPahtgzpuAbsRvA.jpeg",
+  },
+  {
+    title: "Zero config code review and data profiling tool for dbt projects",
+    href: "https://medium.com/inthepipeline/zero-config-code-review-and-data-profiling-tool-for-dbt-projects-8b6de40964b4",
+    thumbnail:
+      "https://miro.medium.com/v2/resize:fill:325:216/format:webp/1*TPm_QXwqS_AF5gi4Ky7qeg.png",
+  },
+  {
     title: "Reduce ‘command fatigue’ working on dbt data projects",
     href: "https://medium.com/inthepipeline/reduce-command-fatigue-working-on-dbt-data-projects-76ce0cf0ee61",
     thumbnail:
