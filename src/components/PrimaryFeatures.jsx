@@ -5,7 +5,7 @@ import clsx from "clsx";
 
 import { Container } from "@/components/Container";
 import backgroundImage from "@/images/background-features.jpg";
-import screenshotPayroll from "@/images/screenshots/run_report.png";
+
 import screenshotExpenses from "@/images/screenshots/comparison_report.png";
 import screenshotVatReturns from "@/images/screenshots/pr_summary.png";
 
@@ -14,19 +14,19 @@ const features = [
     title: "Know Thy Data",
     description:
       "Data profiles with key metrics to assess your data sources (e.g. freshness, uniqueness, top-k, histograms, missing values, duplicate rows)",
-    image: screenshotPayroll,
+    image: "/images/screenshots_copy/run_report.png", // import screenshotPayroll from "@/images/screenshots/run_report.png"; "@/images/screenshots/run_report.png"; // To make images 'Bigger', make the aspect ratio taller.
   },
   {
     title: "See the Changes that Matter",
     description:
       "Visualize schema changes, statistical profiles, and dbt metrics changes, so that you don't lose in the noises of alerts and overlook the important signals that really matters.",
-    image: screenshotExpenses,
+    image: "/images/screenshots_copy/comparison_report.png",
   },
   {
     title: "Automate with Your Existing Stack",
     description:
       "dbt. data warehouses. modern data stack tools. you name it. Augment your CI process with the ready-made github action from marketplace",
-    image: screenshotVatReturns,
+    image: "/images/screenshots_copy/pr_summary.png",
   },
 ];
 
@@ -66,82 +66,38 @@ export function PrimaryFeatures() {
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            Enhanced Data Quality at Your Fingertips
+            Enhanced Data Quality <br/>at Your Fingertips
           </h2>
           <p className="mt-6 text-lg tracking-tight text-blue-100">
             Empower your data engineering processes with robust and accurate information.
           </p>
         </div>
-        <Tab.Group
-          as="div"
-          className="mt-16 grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0"
-          vertical={tabOrientation === "vertical"}
-        >
-          {({ selectedIndex }) => (
-            <>
-              <div className="-mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-4">
-                <Tab.List className="relative z-10 flex gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal">
-                  {features.map((feature, featureIndex) => (
-                    <div
-                      key={feature.title}
-                      className={clsx(
-                        "group relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6",
-                        selectedIndex === featureIndex
-                          ? "bg-white lg:bg-white/10 lg:ring-1 lg:ring-inset lg:ring-white/10"
-                          : "hover:bg-white/10 lg:hover:bg-white/5"
-                      )}
-                    >
-                      <h3>
-                        <Tab
-                          className={clsx(
-                            "font-display text-lg [&:not(:focus-visible)]:focus:outline-none",
-                            selectedIndex === featureIndex
-                              ? "text-blue-600 lg:text-white"
-                              : "text-blue-100 hover:text-white lg:text-white"
-                          )}
-                        >
-                          <span className="absolute inset-0 rounded-full lg:rounded-l-xl lg:rounded-r-none" />
-                          {feature.title}
-                        </Tab>
-                      </h3>
-                      <p
-                        className={clsx(
-                          "mt-2 hidden text-sm lg:block",
-                          selectedIndex === featureIndex
-                            ? "text-white"
-                            : "text-blue-100 group-hover:text-white"
-                        )}
-                      >
-                        {feature.description}
-                      </p>
-                    </div>
-                  ))}
-                </Tab.List>
+
+        <div className="mt-24 flex flex-col items-center justify-center space-y-16">
+          {features.map((feature, index) => (
+            <div key={index} className="w-full flex flex-col md:flex-row md:space-x-6 md:items-center">
+              <div className="flex-1 p-4">
+                <div className="p-8 max-w-md mx-auto">
+                  <h2 className="text-2xl font-bold mb-2 text-white">{feature.title}</h2>
+                  <p className="text-gray-200">{feature.description}</p>
+                </div>
               </div>
-              <Tab.Panels className="lg:col-span-8">
-                {features.map((feature) => (
-                  <Tab.Panel key={feature.title} unmount={false}>
-                    <div className="relative sm:px-6 lg:hidden">
-                      <div className="absolute -inset-x-4 bottom-[-4.25rem] top-[-6.5rem] bg-white/10 ring-1 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl" />
-                      <p className="relative mx-auto max-w-2xl text-base text-white sm:text-center">
-                        {feature.description}
-                      </p>
-                    </div>
-                    <div className="mt-10 w-[50.667rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[50.667rem]">
-                      <Image
-                        className="w-full"
-                        src={feature.image}
-                        alt=""
-                        priority
-                        sizes="(min-width: 1024px) 100vw, (min-width: 640px) 100vw, 50.667rem"
-                      />
-                    </div>
-                  </Tab.Panel>
-                ))}
-              </Tab.Panels>
-            </>
-          )}
-        </Tab.Group>
+              <div className={`flex-1 m-4 ${index % 2 != 0 ? 'md:order-first' : ''} hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-105`}>
+                <a href={feature.image} target='_blank' rel='noopener noreferrer' className="cursor-zoom-in">
+                  <Image
+                    src={feature.image}
+                    alt={feature.title}
+                    layout="responsive"
+                    height={500} // To make images 'Bigger', make the aspect ratio taller.
+                    width={500}
+                    className='rounded-md'
+                  />
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+
       </Container>
     </section>
   );
