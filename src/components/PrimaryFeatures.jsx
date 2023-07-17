@@ -6,8 +6,7 @@ import clsx from "clsx";
 import { Container } from "@/components/Container";
 import backgroundImage from "@/images/background-features.jpg";
 
-import screenshotExpenses from "@/images/screenshots/comparison_report.png";
-import screenshotVatReturns from "@/images/screenshots/pr_summary.png";
+import { track } from "@amplitude/analytics-browser";
 
 const features = [
   {
@@ -83,7 +82,10 @@ export function PrimaryFeatures() {
                 </div>
               </div>
               <div className={`flex-1 m-4 ${index % 2 != 0 ? 'md:order-first' : ''} hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-105`}>
-                <a href={feature.image} target='_blank' rel='noopener noreferrer' className="cursor-zoom-in">
+                <a href={feature.image} target='_blank' rel='noopener noreferrer' className="cursor-zoom-in" 
+                onClick={() => {
+                  track(`[Action] Zoom - ${index} - ${feature.title}`);
+                }}>
                   <Image
                     src={feature.image}
                     alt={feature.title}
