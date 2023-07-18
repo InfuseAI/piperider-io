@@ -56,7 +56,7 @@ function Plan({ name, price, unit = "", description, href, features, featured = 
         featured ? "order-first bg-black invert py-8 lg:order-none" : "lg:py-8"
       )}
     >
-      <h3 className="mt-5 font-display text-lg text-white">{name}</h3>
+      <h3 className="mt-5 font-display text-2xl text-white">{name}</h3>
       <p
         className={clsx(
           "mt-2 text-base",
@@ -65,9 +65,11 @@ function Plan({ name, price, unit = "", description, href, features, featured = 
       >
         {description}
       </p>
-      <p className="order-first font-display text-5xl font-light tracking-tight text-white">
+      <p className="font-display text-5xl font-light tracking-tight text-white pt-6 pb-2">
         <span>{price}</span>
-        <span className="text-xl">{unit ? `/ ${unit}` : ""}</span>
+        <span className="text-xl">
+          {unit ? `/ ${unit}` : ""}
+        </span>
       </p>
       <ul
         role="list"
@@ -116,13 +118,15 @@ export function Pricing() {
             </span>{" "}
             for all.
           </h2>
-          <p className="mt-4 text-lg text-slate-400">
-            Sign up now and get 14 days of Pro Features for free!
+          <p className="mt-4 text-lg text-slate-400 max-w-sm mx-auto">
+            Up-level your Data Quality, whether you’re flying solo or part of a growing org.
+            {/*Sign up now and get 14 days of Pro Features for free!*/}
           </p>
         </div>
         <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
           <Plan
             name="Developer"
+            // name="Free"
             price="$0"
             description="For devs tired of data quality issues"
             href="https://cloud.piperider.io/signup?ref=pricing-0"
@@ -135,6 +139,7 @@ export function Pricing() {
           <Plan
             featured
             name="Pro"
+            // name="Team"
             price="$150"
             unit="month"
             description="For teams building trustworthy pipelines"
