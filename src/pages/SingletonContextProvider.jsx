@@ -8,7 +8,7 @@ import { Heading, Text, Icon, Spacer, Button, Box, Grid } from '@chakra-ui/react
 const SingletonContext = createContext();
 
 // Create a provider
-export function SingletonContextProvider({ children }) {
+export default function SingletonContextProvider({ children }) {
   const [state, setState] = useState('singleton'); // dummy example
 
   const getStartedDisclosure = useDisclosure();
@@ -62,7 +62,7 @@ export function GetStartedModal( {isOpen, onOpen, onClose}) {
 
             <Box bg='white' p={4} borderRadius={8}>
               <Heading  as="h2" fontSize='xl'>Cloud</Heading>
-              <Text my={4}>PipeRider Cloud takes the hassle out of hosting PipeRider. This makes sharing reports easier.</Text>
+              <Text my={4}>PipeRider Cloud takes the hassle out of hosting PipeRider. This makes it easier to share reports.</Text>
 
               <Button colorScheme='orange' mr={3} onClick={onClose} w="100%" borderRadius="100px">
                 Get Started with Cloud
