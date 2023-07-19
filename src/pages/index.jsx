@@ -15,6 +15,10 @@ import { SecondaryFeatures as BlogArea } from "@/components/SecondaryFeatures";
 import { Testimonials } from "@/components/Testimonials";
 import { siteMeta } from "@/lib/siteMeta";
 
+import { ChakraProvider } from '@chakra-ui/react'
+
+import { Text } from '@chakra-ui/react'
+
 export default function Home() {
   /*
   Generate the intercom script and load the composer
@@ -50,13 +54,15 @@ export default function Home() {
       </Head>
       <Header />
       <main>
-        <Hero />
-        <PrimaryFeatures />
-        <BlogArea />
-        <CallToAction />
-        {/* <Testimonials /> */}
-        <Pricing />
-        {/* <Faqs /> */}
+        <ChakraProvider>
+          <Hero />
+          <PrimaryFeatures />
+          <BlogArea />
+          <CallToAction />
+          {/* <Testimonials /> */}
+          <Pricing />
+          {/* <Faqs /> */}
+        </ChakraProvider>
       </main>
       <Footer />
     </>
