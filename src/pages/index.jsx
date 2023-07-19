@@ -16,7 +16,7 @@ import { Testimonials } from "@/components/Testimonials";
 import { siteMeta } from "@/lib/siteMeta";
 
 import { ChakraProvider } from '@chakra-ui/react'
-import { SingletonContextProvider } from './SingletonContextProvider'
+import SingletonContextProvider from './SingletonContextProvider'
 
 import { Text } from '@chakra-ui/react'
 
