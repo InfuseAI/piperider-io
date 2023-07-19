@@ -16,6 +16,7 @@ import { Testimonials } from "@/components/Testimonials";
 import { siteMeta } from "@/lib/siteMeta";
 
 import { ChakraProvider } from '@chakra-ui/react'
+import { SingletonContextProvider } from './SingletonContextProvider'
 
 import { Text } from '@chakra-ui/react'
 
@@ -55,13 +56,15 @@ export default function Home() {
       <Header />
       <main>
         <ChakraProvider>
-          <Hero />
-          <PrimaryFeatures />
-          <BlogArea />
-          <CallToAction />
-          {/* <Testimonials /> */}
-          <Pricing />
-          {/* <Faqs /> */}
+          <SingletonContextProvider>
+            <Hero />
+            <PrimaryFeatures />
+            <BlogArea />
+            <CallToAction />
+            {/* <Testimonials /> */}
+            <Pricing />
+            {/* <Faqs /> */}
+          </SingletonContextProvider>
         </ChakraProvider>
       </main>
       <Footer />

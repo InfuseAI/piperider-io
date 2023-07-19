@@ -13,7 +13,10 @@ import logoTransistor from "@/images/logos/transistor.svg";
 import logoTuple from "@/images/logos/tuple.svg";
 import clsx from "clsx";
 
+import { useSingletonContext } from '@/pages/SingletonContextProvider';
+
 export const FancyUnderline = ({ className, children, ...props }) => {
+
   return (
     <span className={clsx("relative whitespace-nowrap", className)}>
       <svg
@@ -30,6 +33,9 @@ export const FancyUnderline = ({ className, children, ...props }) => {
 };
 
 export function Hero() {
+
+  // const { state, setState } = useSingletonContext();
+
   return (
     <Container className="pb-16 pt-20 text-center lg:pt-32">
       <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
