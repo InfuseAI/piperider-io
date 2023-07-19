@@ -1,8 +1,8 @@
 // pages/redirect
 
-// import {useEffect} from 'react'
+import { useEffect } from 'react'
 
-export default function redirect() {
+export default function DiscordPage() {
     /*
         // After ChakraUI Addition: Error:
             ./src/pages/discord.jsx
@@ -10,9 +10,9 @@ export default function redirect() {
 
         // TODO: Reimplement.
     */
-    // useEffect(() => {
-    //     window.location.assign('https://discord.gg/b3HAykQPkn')
-    // })
+    useEffect(() => {
+        window.location.assign('https://discord.gg/b3HAykQPkn')
+    })
     return(
         <>
         </>
