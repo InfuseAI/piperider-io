@@ -53,8 +53,7 @@ export function SecondaryFeatures() {
             Latest Blog Posts
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700 mb-12">
-            Because you’d probably be a little confused if we suggested you
-            complicate your everyday business tasks instead.
+            Discover the easy and great ways to instantly improve your data workflows.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
