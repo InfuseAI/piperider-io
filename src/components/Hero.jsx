@@ -34,10 +34,15 @@ export const FancyUnderline = ({ className, children, ...props }) => {
 
 export function Hero() {
 
-  // const { state, setState } = useSingletonContext();
+  const { openGetStartedModal } = useSingletonContext();
 
   return (
     <Container className="pb-16 pt-20 text-center lg:pt-32">
+      {/*<h1 onClick={() => {
+        openGetStartedModal();
+      }}>
+        Test Button
+      </h1>*/}
       <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
         The {" "}
         <span className="relative whitespace-nowrap">
