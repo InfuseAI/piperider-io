@@ -2,7 +2,8 @@ import { createContext, useState, useContext } from 'react';
 
 import { useDisclosure } from '@chakra-ui/react'
 import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton } from '@chakra-ui/react'
-import { Heading, Text, Icon, Spacer, Button, Box, Grid } from '@chakra-ui/react'
+import { Heading, Text, Icon, Spacer, Button, Box, Grid, Image } from '@chakra-ui/react'
+import { BsGithub, BsFillCloudFill } from 'react-icons/bs'
 
 // Create a context
 const SingletonContext = createContext();
@@ -54,17 +55,22 @@ export function GetStartedModal( {isOpen, onOpen, onClose}) {
           <Grid gridTemplateColumns="repeat(2, 1fr)" gap={6} textAlign='center'>
             <Box bg='white' p={4} borderRadius={8}>
               <Heading  as="h2" fontSize='xl'>Local or Self-Hosted</Heading>
-              <Text my={4}>PipeRider is open source and free. Use it locally, self-host it, or add Cloud hosting later on.</Text>
-              <Button colorScheme='orange' mr={3} onClick={onClose} w="100%" borderRadius="100px">
+              <Text my={4}>PipeRider is open source and free. Use it locally, self-host it, or add Cloud hosting later on!</Text>
+              <Image maxW='200px' src='/images/illustrations/hand-coding-bro.png' alt='A Command Line Interface' mx='auto'/>
+              <Button colorScheme='orange' mr={3} onClick={onClose} w="100%" borderRadius="100px" py={6} my={4}>
+                <Icon as={BsGithub} boxSize={5} mr={2} />
+                {/* TODO: Hook this up with actual url. And Track its Click. */}
                 Get Started with Command Line
               </Button>
             </Box>
 
             <Box bg='white' p={4} borderRadius={8}>
               <Heading  as="h2" fontSize='xl'>Cloud</Heading>
-              <Text my={4}>PipeRider Cloud takes the hassle out of hosting PipeRider. This makes it easier to share reports.</Text>
-
-              <Button colorScheme='orange' mr={3} onClick={onClose} w="100%" borderRadius="100px">
+              <Text my={4}>PipeRider Cloud takes the hassle out of hosting PipeRider. Share reports with ease!</Text>
+              <Image maxW='200px' src='/images/illustrations/completed-steps-bro.png' alt='A Command Line Interface' mx='auto'/>
+              <Button colorScheme='orange' mr={3} onClick={onClose} w="100%" borderRadius="100px" py={6} my={4}>
+                <Icon as={BsFillCloudFill} boxSize={5} mr={2} />
+                {/* TODO: Hook this up with actual url. And Track its Click. */}
                 Get Started with Cloud
               </Button>
             </Box>
