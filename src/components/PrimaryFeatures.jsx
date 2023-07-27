@@ -16,22 +16,22 @@ import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody,
 
 const features = [
   {
-    title: "Know Thy Data",
+    title: "Predict issues before they emerge",
     description:
-      "Data profiles with key metrics to assess your data sources (e.g. freshness, uniqueness, top-k, histograms, missing values, duplicate rows)",
-    image: "/images/screenshots_copy/run_report.png", // import screenshotPayroll from "@/images/screenshots/run_report.png"; "@/images/screenshots/run_report.png"; // To make images 'Bigger', make the aspect ratio taller.
+      "Instantly evaluate downstream effects before finalizing any merges, right from Pull Requests! Say goodbye to breaking changes in Prod!",
+    image: "/images/features/pull-request-piperider-report-github-downstream-impact.png", // import screenshotPayroll from "@/images/screenshots/run_report.png"; "@/images/screenshots/run_report.png"; // To make images 'Bigger', make the aspect ratio taller.
   },
   {
-    title: "See the Changes that Matter",
+    title: "Birds eye view of unforeseen impacts",
     description:
-      "Visualize schema changes, statistical profiles, and dbt metrics changes, so that you don't lose in the noises of alerts and overlook the important signals that really matters.",
-    image: "/images/screenshots_copy/comparison_report.png",
+      "Seize control over your data quality! Identify and rectify unexpected impacts swiftly with our sophisticated Lineage Diff!",
+    image: "/images/features/lineage-diff-piperider.png",
   },
   {
-    title: "Automate with Your Existing Stack",
+    title: "Build trust with transparency",
     description:
-      "dbt. data warehouses. modern data stack tools. you name it. Augment your CI process with the ready-made github action from marketplace",
-    image: "/images/screenshots_copy/pr_summary.png",
+      "Keep users informed of upcoming changes that matter to them. Automate alerts on business-critical assets like dbt Metrics, Exposures and BI Dashboards!",
+    image: "/images/features/downstream-notification-piperider.png",
   },
 ];
 
@@ -88,8 +88,8 @@ export function PrimaryFeatures() {
             <div key={index} className="w-full flex flex-col md:flex-row md:space-x-6 md:items-center">
               <div className="flex-1 p-4">
                 <div className="p-8 max-w-md mx-auto">
-                  <h2 className="text-2xl font-bold mb-2 text-white">{feature.title}</h2>
-                  <p className="text-gray-200">{feature.description}</p>
+                  <h2 className="text-4xl font-display mb-2 text-white leading-tight">{feature.title}</h2>
+                  <p className="text-gray-200 leading-relaxed my-4">{feature.description}</p>
                 </div>
               </div>
               <div 
@@ -128,7 +128,7 @@ export function PrimaryFeatures() {
 
 export function ImageZoomModal( {isOpen, onOpen, onClose, imageTitle, imagePath}) {
   return (
-    <Modal isOpen={isOpen} onOpen={onOpen} onClose={onClose} size="full">
+    <Modal isOpen={isOpen} onOpen={onOpen} onClose={onClose} size="5xl">
       <ModalOverlay />
       <ModalContent m={8} borderRadius={16}>
         <ModalHeader>{imageTitle ? imageTitle : 'Image'}</ModalHeader>
