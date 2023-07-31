@@ -30,7 +30,7 @@ export function CallToAction() {
           </h2>
           <p className="mt-4 text-lg tracking-tight text-white">
             Try PipeRider today and stop worrying about breaking prod.
-            PipeRdier Cloud is free to get started, and offers flexibility for teams of different sizes and budgets.
+            PipeRider Cloud is free to get started, and offers flexibility for teams of different sizes and budgets.
           </p>
           <div className="mt-10 flex justify-center gap-x-6">
             <Button
