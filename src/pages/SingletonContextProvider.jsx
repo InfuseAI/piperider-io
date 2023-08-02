@@ -77,7 +77,7 @@ export function GetStartedModal( {isOpen, onOpen, onClose}) {
                 <Heading  as="h2" fontSize='xl'>Cloud</Heading>
                 <Text my={4}>PipeRider Cloud takes the hassle out of hosting PipeRider. Share reports with ease!</Text>
                 <Image maxW='200px' src='/images/illustrations/completed-steps-bro.png' alt='A Command Line Interface' mx='auto'/>
-                <Button colorScheme='orange' mr={3} onClick={onClose} w="100%" borderRadius="100px" py={6} my={4}
+                <Button colorScheme='orange' mr={3} w="100%" borderRadius="100px" py={6} my={4}
                   onClick={() => {
                     track(`[Action] Click - Get Started - Cloud`); 
                     window.location.href = 'https://cloud.piperider.io/signup';
