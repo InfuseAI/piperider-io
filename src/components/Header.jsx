@@ -116,6 +116,10 @@ export function Header() {
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <div className="hidden md:block">
+              <iframe src="https://ghbtns.com/github-btn.html?user=InfuseAI&repo=piperider&type=star&count=true" frameborder="0" scrolling="0" width="90" height="20" title="GitHub"></iframe>
+            </div>
+            <div className="hidden md:block">
+              
               <NavLink 
                 href="https://cloud.piperider.io/signin" 
                 onClick = {() => {
@@ -125,6 +129,7 @@ export function Header() {
                 Sign in
               </NavLink>
             </div>
+
             <Button 
               href="https://cloud.piperider.io/signup"
               color="orange"
@@ -136,9 +141,11 @@ export function Header() {
                 Get started <span className="hidden lg:inline">today</span>
               </span>
             </Button>
+
             <div className="-mr-1 md:hidden">
               <MobileNavigation />
             </div>
+
           </div>
         </nav>
       </Container>
