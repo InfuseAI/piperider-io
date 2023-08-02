@@ -53,21 +53,22 @@ export default function Home() {
         <meta property="og:image:width" content="1200"/>
         <meta property="og:image:height" content="630"/>
       </Head>
-      <Header />
-      <main>
-        <ChakraProvider>
-          <SingletonContextProvider>
-            <Hero />
-            <PrimaryFeatures />
-            <BlogArea />
-            <CallToAction />
-            {/* <Testimonials /> */}
-            <Pricing />
-            {/* <Faqs /> */}
-          </SingletonContextProvider>
-        </ChakraProvider>
-      </main>
-      <Footer />
+      <ChakraProvider>
+        <SingletonContextProvider>
+          <Header />
+          <main>
+              <Hero />
+              <PrimaryFeatures />
+              <BlogArea />
+              <CallToAction />
+              {/* <Testimonials /> */}
+              <Pricing />
+              {/* <Faqs /> */}
+          </main>
+          <Footer />
+        </SingletonContextProvider>
+      </ChakraProvider>
+      
     </>
   );
 }

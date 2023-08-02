@@ -104,12 +104,12 @@ export function Hero() {
       <div className="mt-10 flex justify-center gap-x-6">
         <Button 
           color="orange"
-          href="https://cloud.piperider.io/signup" 
           onClick = {() => {
-            track('[Action] Click Hero Cloud');
+            track('[Action] Click Hero Get Started');
+            openGetStartedModal();
           }}
         >
-          Try PipeRider Cloud
+          <span className="mx-3">Get Started Today</span>
         </Button>
         <Button
           href="https://github.com/InfuseAI/piperider"
@@ -119,7 +119,7 @@ export function Hero() {
           }}
         >
           <IconGithub />
-          <span className="ml-3">Download Open Source</span>
+          <span className="ml-3">Open Source Github</span>
         </Button>
       </div>
     </Container>

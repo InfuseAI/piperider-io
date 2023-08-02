@@ -11,6 +11,8 @@ import { Logo } from "@/components/Logo";
 import { NavLink } from "@/components/NavLink";
 import { siteNav } from "@/lib/siteMeta";
 
+import { useSingletonContext } from '@/pages/SingletonContextProvider';
+
 function MobileNavLink({ href, children }) {
   return (
     <Popover.Button as={Link} href={href} className="block w-full p-2">
@@ -97,6 +99,9 @@ function MobileNavigation() {
 }
 
 export function Header() {
+  
+  const { openGetStartedModal } = useSingletonContext();
+
   return (
     <header className="py-10">
       <Container>
@@ -116,7 +121,7 @@ export function Header() {
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <div className="hidden lg:block">
-              <iframe src="https://ghbtns.com/github-btn.html?user=InfuseAI&repo=piperider&type=star&count=true" frameborder="0" scrolling="0" width="90" height="20" title="GitHub"></iframe>
+              <iframe src="https://ghbtns.com/github-btn.html?user=InfuseAI&repo=piperider&type=star&count=true" frameBorder="0" scrolling="0" width="90" height="20" title="GitHub"></iframe>
             </div>
             <div className="hidden md:block">
               
@@ -131,10 +136,11 @@ export function Header() {
             </div>
 
             <Button 
-              href="https://cloud.piperider.io/signup"
+              href="#get-started"
               color="orange"
               onClick = {() => {
-                track('[Action] Click Get started today');
+                track('[Action] Click Get started Header');
+                openGetStartedModal();
               }}
             >
               <span>
