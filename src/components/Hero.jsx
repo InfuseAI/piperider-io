@@ -37,6 +37,7 @@ export function Hero() {
   const { openGetStartedModal } = useSingletonContext();
 
   return (
+    <>
     <Container className="pb-16 pt-20 text-center lg:pt-32">
       {/*<h1 onClick={() => {
         openGetStartedModal();
@@ -71,14 +72,18 @@ export function Hero() {
         </span>{" "}
         Projects
       </h1>
-      <div className="shadow-lg table mx-auto border border-zinc-200 rounded-lg overflow-hidden mb-8 mt-12">
-        <Image
-          src="/metrics-image.png"
-          alt="PipeRider dbt metrics"
-          width={500}
-          height={354}
-        />
-      </div>
+    </Container>
+
+    <div className="table mx-auto">
+      <Image
+        src="/images/hero/PipeRider - Hero Image - Collage - SQL Diff, CLI, Pull Request, Lineage Diff, Profile, Slack Alert, dbt Metric Diff.png"
+        alt="PipeRider dbt metrics"
+        width={1600}
+        height={1200}
+      />
+    </div>
+
+    <Container className="pb-16 pt-8 text-center">
       <div className="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700">
         <p>{"Don't"} break prod.</p>
         <p>
@@ -118,5 +123,7 @@ export function Hero() {
         </Button>
       </div>
     </Container>
+
+    </>
   );
 }
