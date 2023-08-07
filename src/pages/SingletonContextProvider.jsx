@@ -68,7 +68,6 @@ export function GetStartedModal( {isOpen, onOpen, onClose}) {
                   }
                 >
                   <Icon as={BsGithub} boxSize={5} mr={2} />
-                  {/* TODO: Hook this up with actual url. And Track its Click. */}
                   Get Started with Command Line
                 </Button>
               </Box>
@@ -85,7 +84,6 @@ export function GetStartedModal( {isOpen, onOpen, onClose}) {
                   }
                 >
                   <Icon as={BsFillCloudFill} boxSize={5} mr={2} />
-                  {/* TODO: Hook this up with actual url. And Track its Click. */}
                   Get Started with Cloud
                 </Button>
               </Box>
