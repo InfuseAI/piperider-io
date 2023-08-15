@@ -41,10 +41,9 @@ export default function Home() {
 
   return (
     <>
-      <Head>
+      <head>
         <title>{siteMeta.title}</title>
         <meta name="description" content={siteMeta.description} />
-
         <meta property="og:title" content={siteMeta.ogTitle} />
         <meta property="og:image" content={siteMeta.ogImgUrl} />
         <meta property="og:description" content={siteMeta.ogDescription} />
@@ -52,7 +51,8 @@ export default function Home() {
         <meta property="og:type" content={siteMeta.ogType} />
         <meta property="og:image:width" content="1200"/>
         <meta property="og:image:height" content="630"/>
-      </Head>
+        <script async src="https://analytics.umami.is/script.js" data-website-id="ccd6423b-439f-4179-ab29-06a877894da0"></script>
+      </head>
       <ChakraProvider>
         <SingletonContextProvider>
           <Header />
