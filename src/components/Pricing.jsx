@@ -205,6 +205,7 @@ export function Pricing() {
             features={[
               "30 hosted reports per project/month",
               "1 Cloud User",
+              "Basic Lineage Diff",
               "Basic ACL",
               "General Support",
               "Automatic Reports",
