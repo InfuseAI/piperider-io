@@ -53,7 +53,7 @@ function Plan({ pre_title, name, price, unit = "", description, pre_features, hr
     <section
       className={clsx(
         "flex flex-col rounded-3xl px-6 sm:px-8",
-        featured ? "order-first bg-black invert py-8 lg:order-none" : "lg:py-8"
+        featured ? "bg-black invert py-8 lg:order-none" : "lg:py-8"
       )}
     >
       <p
