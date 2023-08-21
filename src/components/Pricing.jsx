@@ -48,7 +48,7 @@ function CheckIcon({ className }) {
   );
 }
 
-function Plan({ name, price, unit = "", description, href, features, featured = false }) {
+function Plan({ pre_title, name, price, unit = "", description, pre_features, href, features, featured = false, has_design_partnership = false }) {
   return (
     <section
       className={clsx(
@@ -56,10 +56,18 @@ function Plan({ name, price, unit = "", description, href, features, featured = 
         featured ? "order-first bg-black invert py-8 lg:order-none" : "lg:py-8"
       )}
     >
-      <h3 className="mt-5 font-display text-2xl text-white">{name}</h3>
       <p
         className={clsx(
-          "mt-2 text-base",
+          "mt-2",
+          featured ? "text-white" : "text-slate-100"
+        )}
+      >
+        {pre_title}
+      </p>
+      <h3 className="mt-1 font-display text-2xl text-white">{name}</h3>
+      <p
+        className={clsx(
+          "mt-4 text-base",
           featured ? "text-white" : "text-slate-400"
         )}
       >
@@ -71,10 +79,31 @@ function Plan({ name, price, unit = "", description, href, features, featured = 
           {unit ? `/ ${unit}` : ""}
         </span>
       </p>
+      <Button
+        href={href}
+        variant={featured ? "solid" : "outline"}
+        color="white"
+        className="mt-6"
+        aria-label={`Get started with the ${name} plan for ${price}`}
+        onClick = {() => {
+          track(`[Action] Click Pricing ${name} plan`);
+        }}
+      >
+        {name === "Enterprise" ? "Contact us" : "Get started"}
+      </Button>
+
+      <p
+        className={clsx(
+          "mt-10 text-base",
+          featured ? "text-white" : "text-slate-400"
+        )}
+      >
+        {pre_features}
+      </p>
       <ul
         role="list"
         className={clsx(
-          "order-last mt-10 flex flex-col gap-y-3 text-sm",
+          "mt-4 flex flex-col gap-y-3 text-sm",
           featured ? "text-white" : "text-slate-200"
         )}
       >
@@ -85,18 +114,48 @@ function Plan({ name, price, unit = "", description, href, features, featured = 
           </li>
         ))}
       </ul>
-      <Button
-        href={href}
-        variant={featured ? "solid" : "outline"}
-        color="white"
-        className="mt-8"
-        aria-label={`Get started with the ${name} plan for ${price}`}
-        onClick = {() => {
-          track(`[Action] Click Pricing ${name} plan`);
-        }}
-      >
-        {name === "Enterprise" ? "Contact us" : "Get started"}
-      </Button>
+
+      {has_design_partnership && (
+        <>
+          <hr className="mt-6 mb-4"/>
+          <p
+            className={clsx(
+              "mt-2",
+              featured ? "text-white" : "text-slate-100"
+            )}
+          >
+            Get Pro for 80% off
+          </p>
+          <h3 className="mt-1 font-display text-2xl text-white">Design Partner</h3>
+          <p
+            className={clsx(
+              "mt-4 text-base",
+              featured ? "text-white" : "text-slate-400"
+            )}
+          >
+            Become a Design Partner and get 80% off the Pro plan.
+          </p>
+          <p className="font-display text-5xl font-light tracking-tight text-white pt-6 pb-2">
+            <span>$200</span>
+            <span className="text-xl">
+              / month
+            </span>
+          </p>
+          <Button
+            href="mailto:product@piperider.io?subject=Design%20Partnership&body=Dear%20PipeRider,%20I%20would%20like%20to%20learn%20more%20about%20your%20Design%20Partner%20program."
+            variant="outline"
+            color="white"
+            className="mt-6"
+            aria-label={`Get started with the Design Partnership plan for $200`}
+            onClick = {() => {
+              track(`[Action] Click Pricing Design Partnership plan`);
+            }}
+          >
+            Check Eligibility
+          </Button>
+        </>
+      )}
+      
     </section>
   );
 }
@@ -110,7 +169,7 @@ export function Pricing() {
     >
       <Container>
         <div className="md:text-center">
-          <p className="text-white">Cloud Plans</p>
+          <p className="text-white">Solutions</p>
           <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
             <span className="relative whitespace-nowrap">
               <SwirlyDoodle className="absolute left-0 top-2/3 h-[0.5em] w-full fill-orange-400" />
@@ -123,44 +182,66 @@ export function Pricing() {
             {/*Sign up now and get 14 days of Pro Features for free!*/}
           </p>
         </div>
-        <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
+        <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-4 xl:mx-0 xl:gap-x-8">
           <Plan
-            name="Developer"
-            // name="Free"
+            pre_title="OSS"
+            name="Open Source"
             price="$0"
-            description="For devs tired of data quality issues"
-            href="https://cloud.piperider.io/signup?ref=pricing-0"
+            description="Build your own data reliability stack with best practices for catching impacts."
+            href="https://cloud.piperider.io/signup?ref=open-source-tier"
+            pre_features="Build your own stack with:"
             features={[
-              "30 report uploads per project per month",
-              "Up to 3 projects",
+              "Impact Summaries",
+              "Data Profile Diffs",
+            ]}
+          />
+          <Plan
+            pre_title="Cloud"
+            name="Developer Plan"
+            price="$0"
+            description="The perfect platform for a busy Dev, for managing and sharing impacts."
+            href="https://cloud.piperider.io/signup?ref=dev-plan"
+            pre_features="Everything in OSS, plus:"
+            features={[
+              "30 hosted reports per project/month",
+              "1 Cloud User",
               "Basic ACL",
+              "General Support",
+              "Automatic Reports",
+              "GUI Report Generator",
+              "Historical Views",
+              "Workspaces",
+              "Secure storage",
             ]}
           />
           <Plan
             featured
-            name="Pro"
-            // name="Team"
-            price="$150"
+            has_design_partnership
+            pre_title="Cloud"
+            name="Pro Plan"
+            price="$1000"
             unit="month"
-            description="For teams building trustworthy pipelines"
-            href="https://cloud.piperider.io/signup?ref=pricing-150"
+            description="Enjoy higher caps. Perfect for teams building trustworthy pipelines."
+            href="https://cloud.piperider.io/signup?ref=pro-plan"
+            pre_features="Everything in Dev, plus:"
             features={[
-              "100 report uploads per project per month",
-              "Up to 10 projects",
-              "Basic ACL",
+              "100 hosted reports per project/month included",
+              "Unlimited Cloud Users",
+              "Advanced Lineage Diff",
+              "Advanced ACL",
+              "Premimum Support",
             ]}
           />
           <Plan
+            pre_title="Cloud"
             name="Enterprise"
             price="Let's Talk!"
-            description="For businesses with custom needs"
-            href="mailto: product@piperider.io"
+            description="For businesses and large teams with custom data quality needs."
+            href="mailto: product@piperider.io?subject=Enterprise%20Plan"
+            pre_features="Everything in Pro, plus:"
             features={[
-              "Pay as you go report uploads",
-              "Unlimited Projects",
-              "Advanced ACL",
-              "SSO Login",
-              "Custom data sources",
+              "Unlimited hosted reports per project/month",
+              "SSO/SAML",
             ]}
           />
         </div>
