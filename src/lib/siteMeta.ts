@@ -58,16 +58,16 @@ export const recentPosts = [
     thumbnail:
       "https://miro.medium.com/v2/resize:fill:325:216/1*1Ee4JgFXhvNshqnWhy6EpA.png",
   },
-  {
-    title: "Why you need code review for you data projects",
-    href: "https://medium.com/inthepipeline/why-you-need-code-review-for-you-data-projects-95e039083df0",
-    thumbnail:
-      "https://miro.medium.com/v2/resize:fill:325:216/format:webp/1*aFHG_28yKua3FpDKDVYTkg.png",
-  },
-  {
-    title: "5 Interesting datasets from the Data Engineering Zoomcamp",
-    href: "https://medium.com/inthepipeline/5-interesting-datasets-from-the-data-engineering-zoomcamp-f0d6dd4d5e15",
-    thumbnail:
-      "https://miro.medium.com/v2/resize:fill:325:216/1*K0xl9dWruJcPzT7lK50cEA.png",
-  },
+  // {
+  //   title: "Why you need code review for you data projects",
+  //   href: "https://medium.com/inthepipeline/why-you-need-code-review-for-you-data-projects-95e039083df0",
+  //   thumbnail:
+  //     "https://miro.medium.com/v2/resize:fill:325:216/format:webp/1*aFHG_28yKua3FpDKDVYTkg.png",
+  // },
+  // {
+  //   title: "5 Interesting datasets from the Data Engineering Zoomcamp",
+  //   href: "https://medium.com/inthepipeline/5-interesting-datasets-from-the-data-engineering-zoomcamp-f0d6dd4d5e15",
+  //   thumbnail:
+  //     "https://miro.medium.com/v2/resize:fill:325:216/1*K0xl9dWruJcPzT7lK50cEA.png",
+  // },
 ];

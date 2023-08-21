@@ -53,10 +53,10 @@ export function SecondaryFeatures() {
             Latest Blog Posts
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700 mb-12">
-            Discover the easy and great ways to instantly improve your data workflows.
+            Discover awesome and easy ways to instantly improve your data workflows.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {recentPosts.map((post) => {
             return (
               <div
@@ -70,7 +70,7 @@ export function SecondaryFeatures() {
                     alt="Blog post image"
                     className="w-full rounded-t-lg"
                   />
-                  <h3 className="font-display text-xl tracking-tight text-slate-900 p-4">
+                  <h3 className="font-display text-md tracking-tight text-slate-900 p-4">
                     {post.title}
                   </h3>
                 </div>
