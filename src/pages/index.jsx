@@ -41,7 +41,7 @@ export default function Home() {
 
   return (
     <>
-      <head>
+      <Head>
         <title>{siteMeta.title}</title>
         <meta name="description" content={siteMeta.description} />
         <meta property="og:title" content={siteMeta.ogTitle} />
@@ -52,7 +52,7 @@ export default function Home() {
         <meta property="og:image:width" content="1200"/>
         <meta property="og:image:height" content="630"/>
         <script async src="https://analytics.umami.is/script.js" data-website-id="ccd6423b-439f-4179-ab29-06a877894da0"></script>
-      </head>
+      </Head>
       <ChakraProvider>
         <SingletonContextProvider>
           <Header />
