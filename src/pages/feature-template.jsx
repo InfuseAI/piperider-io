@@ -8,6 +8,7 @@ import * as amplitude from "@amplitude/analytics-browser";
 import { siteMeta } from "@/lib/siteMeta";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { FeatureHero } from "@/components/FeatureHero";
 import { Footer } from "@/components/Footer";
 import { FeatureFeatures } from "@/components/FeatureFeatures";
 import { CallToAction } from "@/components/CallToAction";
@@ -45,7 +46,7 @@ export default function DiscordPage() {
                 <SingletonContextProvider>
                     <Header />
                     <main>
-                        … Insert Feature Template Body Here …
+                        <FeatureHero />
                         <FeatureFeatures features={
                             [
                               {
