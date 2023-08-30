@@ -9,6 +9,8 @@ import { siteMeta } from "@/lib/siteMeta";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Footer } from "@/components/Footer";
+import { FeatureFeatures } from "@/components/FeatureFeatures";
+import { CallToAction } from "@/components/CallToAction";
 
 import { ChakraProvider } from '@chakra-ui/react'
 import SingletonContextProvider from './SingletonContextProvider'
@@ -44,6 +46,8 @@ export default function DiscordPage() {
                     <Header />
                     <main>
                         … Insert Feature Template Body Here …
+                        <FeatureFeatures />
+                        <CallToAction />
                     </main>
                     <Footer />
                 </SingletonContextProvider>
