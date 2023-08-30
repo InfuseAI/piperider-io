@@ -46,7 +46,28 @@ export default function DiscordPage() {
                     <Header />
                     <main>
                         … Insert Feature Template Body Here …
-                        <FeatureFeatures />
+                        <FeatureFeatures features={
+                            [
+                              {
+                                title: "Spot issues before they emerge",
+                                description:
+                                  "Instantly evaluate downstream effects before finalizing any merges, right from Pull Requests! Say goodbye to breaking changes in Prod!",
+                                image: "/images/features/pull-request-piperider-report-github-downstream-impact.png",
+                              },
+                              {
+                                title: "Know where impacts come from",
+                                description:
+                                  "Seize control over your data quality! Identify and rectify unexpected impacts swiftly with our sophisticated Lineage Diff!",
+                                image: "/images/features/lineage-diff-piperider.png",
+                              },
+                              {
+                                title: "Build trust with transparency",
+                                description:
+                                  "Keep stakeholders informed of upcoming changes that matter to them. Automate alerts on business-critical assets like dbt Metrics, Exposures and BI Dashboards!",
+                                image: "/images/features/downstream-notification-piperider.png",
+                              },
+                            ]
+                        } />
                         <CallToAction />
                     </main>
                     <Footer />
