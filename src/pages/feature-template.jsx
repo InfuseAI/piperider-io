@@ -16,6 +16,10 @@ import { CallToAction } from "@/components/CallToAction";
 import { ChakraProvider } from '@chakra-ui/react'
 import SingletonContextProvider from './SingletonContextProvider'
 
+import { BsEye, BsEyeFill, BsFillAlarmFill, BsFillCheckCircleFill } from 'react-icons/bs' // <- NOTE: These icons must also be imported into FeatureFeatures component.
+import { GrRun } from 'react-icons/gr'
+import { BiGitPullRequest } from 'react-icons/bi'
+
 // import { useEffect } from 'react'
 
 export default function DiscordPage() {
@@ -55,6 +59,7 @@ export default function DiscordPage() {
                             [
                               {
                                 title: "Check data impacts and avoid bad deployments",
+                                icon: BsEyeFill,
                                 description: null,
                                 points: [
                                     "See the data impact of every code change",
@@ -65,6 +70,7 @@ export default function DiscordPage() {
                               },
                               {
                                 title: "Identify and fix unexpected data issues quickly",
+                                icon: GrRun,
                                 description: null,
                                 points: [
                                     "Spot any unexpected data discrepancies instantly in Impact Summaries",
@@ -75,6 +81,7 @@ export default function DiscordPage() {
                               },
                               {
                                 title: "Seamless integration with Pull Requests",
+                                icon: BiGitPullRequest,
                                 description: null,
                                 points: [
                                     "Embeds into Pull Requests for effortless code reviews and CI/CD",

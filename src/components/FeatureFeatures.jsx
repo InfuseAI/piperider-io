@@ -56,6 +56,7 @@ export function FeatureFeatures({features}) {
             <div key={index} className="w-full flex flex-col md:flex-row md:space-x-6 md:items-center">
               <div className="flex-1 p-4">
                 <div className="p-8 max-w-md mx-auto">
+                  <h2 className="text-3xl font-display mb-2 leading-tight mb-4"><Icon as={feature.icon} /></h2>
                   <h2 className="text-3xl font-display mb-2 leading-tight mb-4">{feature.title}</h2>
                   {feature.description && (
                     <p className="leading-relaxed my-4">{feature.description}</p>
