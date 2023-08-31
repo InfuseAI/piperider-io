@@ -6,6 +6,8 @@ import clsx from "clsx";
 import { Container } from "@/components/Container";
 import backgroundImage from "@/images/background-features.jpg";
 
+import { useSingletonContext } from '@/pages/SingletonContextProvider';
+
 import { track } from "@amplitude/analytics-browser";
 
 import { Text, Icon, Spacer, Button } from '@chakra-ui/react'
@@ -16,6 +18,8 @@ import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody,
 
 export function FeatureHero({feature}) {
   let [tabOrientation, setTabOrientation] = useState("horizontal");
+
+  const { openGetStartedModal } = useSingletonContext();
 
   useEffect(() => {
     let lgMediaQuery = window.matchMedia("(min-width: 1024px)");
@@ -51,20 +55,32 @@ export function FeatureHero({feature}) {
         <div className="flex flex-col items-center justify-center space-y-16">
             <div className="w-full flex flex-col md:flex-row md:space-x-6 md:items-center">
               <div className="flex-1 p-4">
-                <div className="p-8 max-w-md mx-auto">
-                  <h1 className="text-6xl font-display mb-2 text-white leading-none">{feature.title}</h1>
-                  <p className="text-gray-200 leading-relaxed my-4">{feature.description}</p>
+                <div className="md:p-8 max-w-md md:mx-auto">
+                  <h1 className="text-4xl md:text-6xl font-display mb-2 text-white leading-none">{feature.title}</h1>
+                  <p className="text-gray-200 leading-relaxed my-6">{feature.description}</p>
+                  <div className="">
+                    <Button
+                      borderRadius="full"
+                      className="px-12"
+                      onClick={() => {
+                        track("[Action] Click CTA - Feature Hero");
+                        openGetStartedModal();
+                      }}
+                    >
+                      Get Started
+                    </Button>
+                  </div>
                 </div>
               </div>
               <div className={`flex-1 m-4 `}>
-                  <Image
-                    src={feature.image}
-                    alt={feature.title}
-                    layout="responsive"
-                    height={500} // To make images 'Bigger', make the aspect ratio taller.
-                    width={500}
-                    className='rounded-md'
-                  />
+                <Image
+                  src={feature.image}
+                  alt={feature.title}
+                  layout="responsive"
+                  height={500} // To make images 'Bigger', make the aspect ratio taller.
+                  width={500}
+                  className='rounded-md'
+                />
               </div>
             </div>
           
