@@ -53,7 +53,7 @@ export default function DiscordPage() {
                         <FeatureHero feature={{
                             title: "See Data Impacts in Pull Requests. Catch issues before merging.",
                             description: "Instantly spot critical data impacts as part of your everyday workflow.",
-                            image: "/images/features/pull-request-piperider-report-github-downstream-impact.png",
+                            image: "/images/features/pull-request-piperider-report-github-downstream-impact-white-20230831.png",
                         }}/>
                         <FeatureFeatures features={
                             [
@@ -66,7 +66,7 @@ export default function DiscordPage() {
                                     "Data Impact Summaries for revealing unexpected discrepancies at a glance",
                                     "Peace of mind that no data issues are deployed into production"
                                 ],
-                                image: "/images/features/pull-request-piperider-report-github-downstream-impact.png",
+                                image: "/images/subfeatures/pull-request-summary-43.png",
                               },
                               {
                                 title: "Quickly identify and fix unexpected data issues",
@@ -77,7 +77,7 @@ export default function DiscordPage() {
                                     "Quickly perform Root Cause Analysis with quick links to the right place",
                                     "Get a birds eye view of upstream causes and downstream impacts with Lineage Diff"
                                 ],
-                                image: "/images/features/lineage-diff-piperider.png",
+                                image: "/images/subfeatures/pull-request-links-out-43.png",
                               },
                               {
                                 title: "Seamless integration with Pull Requests",
@@ -88,7 +88,7 @@ export default function DiscordPage() {
                                     "Data Impact Summaries everywhere you need them, from PR, to CI, to online reports",
                                     "Keep a historic log of every code change and data impact"
                                 ],
-                                image: "/images/features/downstream-notification-piperider.png",
+                                image: "/images/subfeatures/impact-summary-in-all-places-43.png",
                               },
                             ]
                         } />
