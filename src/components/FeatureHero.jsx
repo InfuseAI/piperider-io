@@ -14,15 +14,7 @@ import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody,
 
 /////////////////////////////////////////////////////////////
 
-const feature =
-  {
-    title: "Spot issues before they emerge",
-    description:
-      "Instantly evaluate downstream effects before finalizing any merges, right from Pull Requests! Say goodbye to breaking changes in Prod!",
-    image: "/images/features/pull-request-piperider-report-github-downstream-impact.png",
-  };
-
-export function FeatureHero() {
+export function FeatureHero({feature}) {
   let [tabOrientation, setTabOrientation] = useState("horizontal");
   
   let [zoomedImage, setZoomedImage] = useState(null);

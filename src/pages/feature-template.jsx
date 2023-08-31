@@ -46,7 +46,11 @@ export default function DiscordPage() {
                 <SingletonContextProvider>
                     <Header />
                     <main>
-                        <FeatureHero />
+                        <FeatureHero feature={{
+                            title: "Spot issues before they emerge",
+                            description: "Instantly evaluate downstream effects before finalizing any merges, right from Pull Requests! Say goodbye to breaking changes in Prod!",
+                            image: "/images/features/pull-request-piperider-report-github-downstream-impact.png",
+                        }}/>
                         <FeatureFeatures features={
                             [
                               {
