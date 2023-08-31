@@ -16,7 +16,7 @@ import { CallToAction } from "@/components/CallToAction";
 import { ChakraProvider } from '@chakra-ui/react'
 import SingletonContextProvider from './SingletonContextProvider'
 
-import { BsEye, BsEyeFill, BsFillAlarmFill, BsFillCheckCircleFill } from 'react-icons/bs' // <- NOTE: These icons must also be imported into FeatureFeatures component.
+import { BsEye, BsEyeFill, BsFillAlarmFill, BsFillCheckCircleFill } from 'react-icons/bs'
 import { GrRun } from 'react-icons/gr'
 import { BiGitPullRequest } from 'react-icons/bi'
 
@@ -69,7 +69,7 @@ export default function DiscordPage() {
                                 image: "/images/features/pull-request-piperider-report-github-downstream-impact.png",
                               },
                               {
-                                title: "Identify and fix unexpected data issues quickly",
+                                title: "Quickly identify and fix unexpected data issues",
                                 icon: GrRun,
                                 description: null,
                                 points: [
