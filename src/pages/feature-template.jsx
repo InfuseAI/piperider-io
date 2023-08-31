@@ -54,21 +54,36 @@ export default function DiscordPage() {
                         <FeatureFeatures features={
                             [
                               {
-                                title: "Spot issues before they emerge",
+                                title: "Check data impacts and avoid bad deployments",
                                 description:
                                   "Instantly evaluate downstream effects before finalizing any merges, right from Pull Requests! Say goodbye to breaking changes in Prod!",
+                                points: [
+                                    "See the data impact of every code change",
+                                    "Data Impact Summaries for revealing unexpected discrepancies at a glance",
+                                    "Peace of mind that no data issues are deployed into production"
+                                ],
                                 image: "/images/features/pull-request-piperider-report-github-downstream-impact.png",
                               },
                               {
-                                title: "Know where impacts come from",
+                                title: "Identify and fix unexpected data issues quickly",
                                 description:
                                   "Seize control over your data quality! Identify and rectify unexpected impacts swiftly with our sophisticated Lineage Diff!",
+                                points: [
+                                    "Spot any unexpected data discrepancies instantly in Impact Summaries",
+                                    "Quickly perform Root Cause Analysis with quick links to the right place",
+                                    "Get a birds eye view of upstream causes and downstream impacts with Lineage Diff"
+                                ],
                                 image: "/images/features/lineage-diff-piperider.png",
                               },
                               {
-                                title: "Build trust with transparency",
+                                title: "Seamless integration with Pull Requests",
                                 description:
                                   "Keep stakeholders informed of upcoming changes that matter to them. Automate alerts on business-critical assets like dbt Metrics, Exposures and BI Dashboards!",
+                                points: [
+                                    "Embeds into Pull Requests for effortless code reviews and CI/CD",
+                                    "Data Impact Summaries everywhere you need them, from PR, to CI, to online reports",
+                                    "Keep a historic log of every code change and data impact"
+                                ],
                                 image: "/images/features/downstream-notification-piperider.png",
                               },
                             ]
