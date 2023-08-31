@@ -16,9 +16,6 @@ import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody,
 
 export function FeatureHero({feature}) {
   let [tabOrientation, setTabOrientation] = useState("horizontal");
-  
-  let [zoomedImage, setZoomedImage] = useState(null);
-  let [zoomedImageTitle, setZoomedImageTitle] = useState(null);
 
   useEffect(() => {
     let lgMediaQuery = window.matchMedia("(min-width: 1024px)");
@@ -59,17 +56,7 @@ export function FeatureHero({feature}) {
                   <p className="text-gray-200 leading-relaxed my-4">{feature.description}</p>
                 </div>
               </div>
-              <div 
-                className={`flex-1 m-4 `}
-                onClick={() => {
-                  setZoomedImage(feature.image); 
-                  setZoomedImageTitle(feature.title);
-                  track(`[Action] Feature Zoom - ${feature.title}`);
-                }}
-              >
-
-              {/* Todo: Readd Tracking OnClick */}
-
+              <div className={`flex-1 m-4 `}>
                   <Image
                     src={feature.image}
                     alt={feature.title}
