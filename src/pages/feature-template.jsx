@@ -55,8 +55,7 @@ export default function DiscordPage() {
                             [
                               {
                                 title: "Check data impacts and avoid bad deployments",
-                                description:
-                                  "Instantly evaluate downstream effects before finalizing any merges, right from Pull Requests! Say goodbye to breaking changes in Prod!",
+                                description: null,
                                 points: [
                                     "See the data impact of every code change",
                                     "Data Impact Summaries for revealing unexpected discrepancies at a glance",
@@ -66,8 +65,7 @@ export default function DiscordPage() {
                               },
                               {
                                 title: "Identify and fix unexpected data issues quickly",
-                                description:
-                                  "Seize control over your data quality! Identify and rectify unexpected impacts swiftly with our sophisticated Lineage Diff!",
+                                description: null,
                                 points: [
                                     "Spot any unexpected data discrepancies instantly in Impact Summaries",
                                     "Quickly perform Root Cause Analysis with quick links to the right place",
@@ -77,8 +75,7 @@ export default function DiscordPage() {
                               },
                               {
                                 title: "Seamless integration with Pull Requests",
-                                description:
-                                  "Keep stakeholders informed of upcoming changes that matter to them. Automate alerts on business-critical assets like dbt Metrics, Exposures and BI Dashboards!",
+                                description: null,
                                 points: [
                                     "Embeds into Pull Requests for effortless code reviews and CI/CD",
                                     "Data Impact Summaries everywhere you need them, from PR, to CI, to online reports",

@@ -10,6 +10,14 @@ import { track } from "@amplitude/analytics-browser";
 import { Text, Icon, Spacer, Button } from '@chakra-ui/react'
 import { useDisclosure } from '@chakra-ui/react'
 import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton } from '@chakra-ui/react'
+import {
+  List,
+  ListItem,
+  ListIcon,
+  OrderedList,
+  UnorderedList,
+} from '@chakra-ui/react'
+import { BsFillCheckCircleFill } from 'react-icons/bs'
 
 /////////////////////////////////////////////////////////////
 
@@ -48,8 +56,18 @@ export function FeatureFeatures({features}) {
             <div key={index} className="w-full flex flex-col md:flex-row md:space-x-6 md:items-center">
               <div className="flex-1 p-4">
                 <div className="p-8 max-w-md mx-auto">
-                  <h2 className="text-4xl font-display mb-2 leading-tight">{feature.title}</h2>
-                  <p className="leading-relaxed my-4">{feature.description}</p>
+                  <h2 className="text-3xl font-display mb-2 leading-tight mb-4">{feature.title}</h2>
+                  {feature.description && (
+                    <p className="leading-relaxed my-4">{feature.description}</p>
+                  )}
+                  <UnorderedList pl={2} styleType="none" >
+                    {feature.points.map((point, point_index) => (
+                      <ListItem key={point_index} my='2' className='leading-relaxed' position='relative'>
+                        <ListIcon as={BsFillCheckCircleFill} color='orange.500' position='absolute' left='-23px' top='5px' />
+                        {point}
+                      </ListItem>
+                    ))}
+                  </UnorderedList>
                 </div>
               </div>
               <div 
