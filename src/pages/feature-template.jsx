@@ -47,8 +47,8 @@ export default function DiscordPage() {
                     <Header />
                     <main>
                         <FeatureHero feature={{
-                            title: "Spot issues before they emerge",
-                            description: "Instantly evaluate downstream effects before finalizing any merges, right from Pull Requests! Say goodbye to breaking changes in Prod!",
+                            title: "See Data Impacts in Pull Requests. Catch issues before merging.",
+                            description: "Instantly spot critical data impacts as part of your everyday workflow.",
                             image: "/images/features/pull-request-piperider-report-github-downstream-impact.png",
                         }}/>
                         <FeatureFeatures features={

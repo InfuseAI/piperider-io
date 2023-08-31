@@ -56,12 +56,12 @@ export function FeatureHero({feature}) {
             <div className="w-full flex flex-col md:flex-row md:space-x-6 md:items-center">
               <div className="flex-1 p-4">
                 <div className="md:p-8 max-w-md md:mx-auto">
-                  <h1 className="text-4xl md:text-6xl font-display mb-2 text-white leading-none">{feature.title}</h1>
+                  <h1 className="text-4xl font-display mb-2 text-white leading-tight">{feature.title}</h1>
                   <p className="text-gray-200 leading-relaxed my-6">{feature.description}</p>
                   <div className="">
                     <Button
                       borderRadius="full"
-                      className="px-12"
+                      px="6"
                       onClick={() => {
                         track("[Action] Click CTA - Feature Hero");
                         openGetStartedModal();
