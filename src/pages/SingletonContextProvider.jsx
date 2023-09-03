@@ -57,8 +57,8 @@ export function GetStartedModal( {isOpen, onOpen, onClose}) {
             {/* TODO: Make this ROW Based on Mobile - e.g. Stack with relative directions and Boxes with Flex 1. */}
             <Grid gridTemplateColumns="repeat(2, 1fr)" gap={6} textAlign='center'>
               <Box bg='white' p={4} borderRadius={8}>
-                <Heading  as="h2" fontSize='xl'>Local or Self-Hosted</Heading>
-                <Text my={4}>PipeRider is open source and free. Use it locally, self-host it, or add Cloud hosting later on!</Text>
+                <Heading  as="h2" fontSize='xl'>Local</Heading>
+                <Text my={4}>PipeRider is open source and free. Use it locally, or add Cloud hosting later on!</Text>
                 <Image maxW='200px' src='/images/illustrations/hand-coding-bro.png' alt='A Command Line Interface' mx='auto'/>
                 <Button colorScheme='orange' mr={3} w="100%" borderRadius="100px" py={6} my={4}
                   onClick={() => {
