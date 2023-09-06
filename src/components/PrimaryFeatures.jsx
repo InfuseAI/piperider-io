@@ -113,10 +113,11 @@ export function PrimaryFeatures() {
                 className={`flex-1 m-4 ${index % 2 != 0 ? 'md:order-first' : ''} 
                   hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-105 cursor-pointer`}
                 onClick={() => {
-                  setZoomedImage(feature.image); 
-                  setZoomedImageTitle(feature.title);
+                  // setZoomedImage(feature.image); 
+                  // setZoomedImageTitle(feature.title);
                   track(`[Action] Zoom - ${index} - ${feature.title}`);
-                  imageZoomModalDisclosure.onOpen();
+                  // imageZoomModalDisclosure.onOpen();
+                  window.location.href = feature.link;
                 }}
               >
 
