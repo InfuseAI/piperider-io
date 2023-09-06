@@ -20,18 +20,21 @@ const features = [
     description:
       "Instantly evaluate downstream effects before finalizing any merges, right from Pull Requests! Say goodbye to breaking changes in Prod!",
     image: "/images/features/pull-request-piperider-report-github-downstream-impact.png", // import screenshotPayroll from "@/images/screenshots/run_report.png"; "@/images/screenshots/run_report.png"; // To make images 'Bigger', make the aspect ratio taller.
+    link: "/pull-request-data-report"
   },
   {
     title: "Know where impacts come from",
     description:
       "Seize control over your data quality! Identify and rectify unexpected impacts swiftly with our sophisticated Lineage Diff!",
     image: "/images/features/lineage-diff-piperider.png",
+    link: "/data-lineage-diff"
   },
   {
     title: "Build trust with transparency",
     description:
       "Keep stakeholders informed of upcoming changes that matter to them. Automate alerts on business-critical assets like dbt Metrics, Exposures and BI Dashboards!",
     image: "/images/features/downstream-notification-piperider.png",
+    link: "/data-change-alerts"
   },
 ];
 
@@ -90,6 +93,20 @@ export function PrimaryFeatures() {
                 <div className="p-8 max-w-md mx-auto">
                   <h2 className="text-4xl font-display mb-2 text-white leading-tight">{feature.title}</h2>
                   <p className="text-gray-200 leading-relaxed my-4">{feature.description}</p>
+                  <Button
+                    href={feature.link}
+                    variant={"outline"}
+                    color="white"
+                    className="mt-6 hover:text-black"
+                    aria-label={`Learn more about: ${feature.title}`}
+                    onClick = {() => {
+                      track(`[Action] Learn More about ${feature.title}`);
+                      window.location.href = feature.link;
+                    }}
+                    borderRadius='3xl'
+                  >
+                    Learn More
+                  </Button>
                 </div>
               </div>
               <div 
