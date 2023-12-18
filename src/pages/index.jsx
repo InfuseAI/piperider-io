@@ -1,6 +1,6 @@
 import Head from "next/head";
 import getConfig from "next/config";
-import { loadIntercom } from "next-intercom";
+// import { loadIntercom } from "next-intercom";
 
 import * as amplitude from "@amplitude/analytics-browser";
 
@@ -24,12 +24,12 @@ export default function Home() {
   /*
   Generate the intercom script and load the composer
   */
-  loadIntercom({
-    appId: "ofl16ydc", // default : ''
-    ssr: false, // default: false
-    initWindow: true, // default: true
-    delay: 0, // default: 0  - usefull for mobile devices to prevent blocking the main thread
-  });
+  // loadIntercom({
+  //   appId: "ofl16ydc", // default : ''
+  //   ssr: false, // default: false
+  //   initWindow: true, // default: true
+  //   delay: 0, // default: 0  - usefull for mobile devices to prevent blocking the main thread
+  // });
 
   const { publicRuntimeConfig } = getConfig();
   const AMPLITUDE_API_KEY = publicRuntimeConfig.AMPLITUDE_API_KEY;
